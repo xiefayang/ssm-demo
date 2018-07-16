@@ -7,43 +7,43 @@
     <groupId>com.study.ssm.demo</groupId>
     <artifactId>Demo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-web</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-api</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-api-impl</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-service</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-common</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-model</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.study.ssm.demo</groupId>
                 <artifactId>Demo-dao</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
             <dependency>
@@ -209,6 +209,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build> 
+    
     <modules>
         <module>Demo-web</module>
         <module>Demo-api</module>
