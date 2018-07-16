@@ -27,9 +27,9 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
-/Demo-web/logs/
-/Demo-web/logs-archive/
+/sp-demo-web/logs/
+/sp-demo-web/logs-archive/
 /logs/
 /logs-archive/
-/Demo-impl/logs-archive/
-/Demo-impl/logs/
+/sp-demo-impl/logs-archive/
+/sp-demo-impl/logs/
