@@ -16,7 +16,7 @@
     <context:property-placeholder location="classpath*:jdbc.properties"></context:property-placeholder>
     <!--声明式事务aop配置-->
     <aop:config>
-        <aop:pointcut id="aoppointcut" expression="execution(* com.study.ssm.demo.service.impl.*.*(..))"></aop:pointcut>
+        <aop:pointcut id="aoppointcut" expression="execution(* com.study.demo.service.impl.*.*(..))"></aop:pointcut>
         <aop:advisor advice-ref="txadvice" pointcut-ref="aoppointcut"></aop:advisor>
     </aop:config>
     <!--事务的传播特性-->
@@ -59,16 +59,16 @@
         <!--告诉spring，mybatisMpapper配置文件位置-->
         <property name="mapperLocations">
             <array>
-                <value>classpath*:com/study/ssm/demo/mapper/*Mapper.xml</value>
+                <value>classpath*:com/study/demo/mapper/*Mapper.xml</value>
             </array>
         </property>
         <!--给包取别名-->
-        <property name="typeAliasesPackage" value="com.study.ssm.demo.model"></property>
+        <property name="typeAliasesPackage" value="com.study.demo.model"></property>
     </bean>
     <!--mapper扫描配置-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--指定dao接口的路径-->
-        <property name="basePackage" value="com.study.ssm.demo.mapper"></property>
+        <property name="basePackage" value="com.study.demo.mapper"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 </beans>
