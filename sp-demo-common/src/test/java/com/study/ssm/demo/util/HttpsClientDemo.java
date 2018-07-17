@@ -5,7 +5,7 @@ import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 
-public class HttpClentDemo {
+public class HttpsClientDemo {
 
 	public static void main(String[] args) {
 		String urlHttps="https://www.cnblogs.com/javacatalina/p/6641338.html";

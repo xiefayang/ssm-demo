@@ -19,17 +19,17 @@ public class ReflectDemo {
 	public static void reflect01() throws IllegalArgumentException, IllegalAccessException, NoSuchMethodException, SecurityException, InstantiationException, InvocationTargetException{
 		 Student student = new Student();
 		 student.setId(122L);
-		 student.setAddress("ÉÏº£");
+		 student.setAddress("ä¸Šæµ·");
 		 student.setMobilePhone("12345");
 		 student.setPassword("23332");
-		 student.setUserName("ĞÕÃû");
+		 student.setUserName("å§“å");
 		 Class<? extends Student> class1 = student.getClass();
 		 Field[] declaredFields = class1.getDeclaredFields();
 		 for (Field field : declaredFields) {
 			 String name = field.getName();
 			 field.setAccessible(true);
 			 Object object = field.get(student);
-			 System.out.println("ÊôĞÔÃû="+name+"===="+"ÊôĞÔÖµ="+object);
+			 System.out.println("å±æ€§å="+name+"===="+"å±æ€§å€¼="+object);
 			 System.out.println("============");
 		 }
 		 Constructor<? extends Student> constructor = class1.getConstructor(null);
@@ -40,18 +40,18 @@ public class ReflectDemo {
 	public static void reflect02() throws IntrospectionException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
 		 Student student = new Student();
 		 student.setId(122L);
-		 student.setAddress("±±¾©");
+		 student.setAddress("åŒ—äº¬");
 		 student.setMobilePhone("12345");
 		 student.setPassword("23332");
-		 student.setUserName("ĞÕÃû");
+		 student.setUserName("å§“å");
 		 BeanInfo beanInfo = Introspector.getBeanInfo(student.getClass());
 		 PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
 		 for (PropertyDescriptor propertyDescriptor : propertyDescriptors) {
-			 String name = propertyDescriptor.getName();//ÊôĞÔÃû
+			 String name = propertyDescriptor.getName();//å±æ€§å
 			 Method readMethod = propertyDescriptor.getReadMethod();
 			 Object invoke = readMethod.invoke(student);
 			 String string = invoke.toString();
-			 System.out.println("ÊôĞÔÃû="+name+"===="+"ÊôĞÔÖµ="+string);
+			 System.out.println("å±æ€§å="+name+"===="+"å±æ€§å€¼="+string);
 			 System.out.println("============");
 		}
 	}
