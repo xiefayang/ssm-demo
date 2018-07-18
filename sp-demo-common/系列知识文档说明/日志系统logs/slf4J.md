@@ -1,6 +1,8 @@
 slf4j bound to others logs官网.png ==> https://www.slf4j.org/manual.html
 slf4j桥接方式-官网.png ==> https://www.slf4j.org/legacy.html
 
+参考文档：https://www.cnblogs.com/chenhongliang/p/5312517.html
+
 #1、import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    
