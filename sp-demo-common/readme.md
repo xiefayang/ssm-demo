@@ -1,3 +1,7 @@
+前言：
+git仓库地址1：https://github.com/yuanjiajia/ssm-demo
+git仓库地址2：https://github.com/xiefayang/ssm-demo.git
+
 sp-demo-common：
 
 1、存放第三方工具类jar包，如hutool-all.jar；
