@@ -26,7 +26,12 @@
     <bean id="commonsMultipartFile" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="1000000"></property>
     </bean>
-
+    
+	<!-- 在SpringMVC的Bean中写入资源路径映射 -->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+ 	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+	
+		
     <!--导入spring，防止事务失效-->
     <import resource="classpath*:config/spring/applicationContext-repository.xml"></import>
 </beans>
