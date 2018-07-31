@@ -33,5 +33,5 @@
 	
 		
     <!--导入spring，防止事务失效-->
-    <import resource="classpath*:config/spring/applicationContext-repository.xml"></import>
+    <import resource="classpath*:spring/applicationContext-repository.xml"></import>
 </beans>
